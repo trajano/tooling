@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.trajano.eclipse</groupId>
+  <artifactId>net.trajano.openfolder.selectionprocessor</artifactId>
+  <version>3.5.0.1</version>
+  <description>Open Folder plugin selection processors</description>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="feature_export" name="build">
+	<xmlproperty file="feature.xml" />
+	<target name="feature_export">
+		<pde.exportFeatures destination="${basedir}" exportSource="true" exportType="zip" features="net.trajano.eclipse.platform" filename="${feature(id)}_${feature(version)}.zip" useJARFormat="false" />
+	</target>
+	<target name="site_export">
+		<pde.exportFeatures destination="${basedir}/../opensource.trajano.net/" exportSource="true" exportType="directory" features="net.trajano.eclipse.platform" useJARFormat="true" />
+	</target>
+</project>

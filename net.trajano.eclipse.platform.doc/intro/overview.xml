@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="nettrajanoeclipseplatform-overview" style="css/sample.css" name="Eclipse Platform Extensions" path="overview/@">
+		<group style-id="content-group" id="nettrajanoeclipseplatformdoc-introLink-group">
+       		<link label="Eclipse Plaftorm Extensions" url="http://org.eclipse.ui.intro/showHelpTopic?id=/net.trajano.eclipse.platform.doc/html/toc.html" id="nettrajanoeclipseplatformdoc-introLink" style-id="content-link">
+          		<text>Provides some extra functionality to the IDE: * GC * Copy file name to clipboard * Copy fully qualified name to clipboard * Open folder in explorer * Open folder in command prompt * Open folder in navigator.</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<introContent>
+  	<extensionContent id="nettrajanoeclipseplatform-whatsnew" style="css/sample.css" name="Eclipse Platform Extensions" path="whatsnew/@">
+		<group style-id="content-group" id="nettrajanoeclipseplatformdoc-introLink-group">
+       		<link label="Eclipse Plaftorm Extensions" url="http://org.eclipse.ui.intro/showHelpTopic?id=/net.trajano.eclipse.platform.doc/html/history.html" id="nettrajanoeclipseplatformdoc-introLink" style-id="content-link">
+          		<text>See what's new with the Eclipse Platform Extensions plugin.</text>
+       		</link>
+       	</group>
+  	</extensionContent>
+</introContent>

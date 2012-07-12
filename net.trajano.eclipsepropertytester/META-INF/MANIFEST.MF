@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %plugin.name
+Bundle-SymbolicName: net.trajano.eclipsepropertytester;singleton:=true
+Bundle-Version: 3.6.1.1
+Bundle-Vendor: trajano.net
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Require-Bundle: org.eclipse.core.expressions;bundle-version="3.1.0",
+ org.eclipse.core.runtime;bundle-version="3.1.0",
+ org.junit;bundle-version="3.0.0";resolution:=optional
+Bundle-ActivationPolicy: lazy
+Export-Package: net.trajano.eclipsepropertytester

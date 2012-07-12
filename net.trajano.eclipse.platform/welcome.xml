@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<welcomePage title="Eclipse Platform Extensions" format="wrap">
+  <intro>This page will help familiarize you with the Eclipse Platform Extensions. To get started, read the sections below and click on the related links.</intro>
+  <item>
+    <b>What's New</b>
+    The <topic id="/net.trajano.eclipse.platform.doc/html/history.html">release history</topic> of this feature details what has changed between releases.
+  </item>
+  <item>
+    <b>Activating the extensions</b>
+    Instructions on activating the extensions are avaiable in <topic id="/net.trajano.eclipse.platform.doc/html/activating.html">the user guide</topic>.
+  </item>
+  <item>
+    <b>Learn more</b>
+    To learn more you can browse the <topic id="/net.trajano.eclipse.platform.doc/toc.xml">Eclipse Platform Extensions Guide</topic>.
+  </item>
+</welcomePage>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Platform Extensions</title>
+<link rel="stylesheet" href="common.css" />
+</head>
+<body>
+<h1>Activating Eclipse Platform Extensions</h1>
+<div class="content">
+<ol>
+	<li>Click on Window -&gt; Customize Perspective... <br />
+	<img src="window-menu.png" alt="Window menu" /></li>
+	<li>Go to the "Commands" tab, check off "Platform Extensions"<br />
+	<img src="customize-perspective.png"
+		alt="Customize Perspective dialog image" /></li>
+	<li>Click on "Ok"</li>
+</ol>
+<p>I do wish this can be done programatically through an action link
+from the welcome page or this help screen, but doing so requires using
+an internal API call which I am trying to avoid. The specific API call
+is <code> org.eclipse.ui.internal.Perspective.setActionSets()</code>.
+Hopefully, the Eclipse developers will release it as <code>org.eclipse.ui.IPerspective</code>
+in a future version.</p>
+</div>
+</body>
+</html>

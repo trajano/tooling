@@ -1,0 +1,6 @@
+<contexts> 
+   <context  id="preferencePageContext"> 
+   <description>This preference page allows you to specify settings for the platform extensions..</description> 
+   		<topic href="html/configuring.html"  label="Configuring the plug-in"/> 
+	</context> 
+</contexts> 

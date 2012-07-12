@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="net.trajano.eclipsepropertytester.propertyTesters"
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="net.trajano.eclipsepropertytester.EclipsePlatformLocationTester"
+            id="net.trajano.eclipsepropertytester.eclipsePlatformLocationTester"
+            namespace="net.trajano.eclipsePropertyTester"
+            properties="user.location,install.location,instance.location"
+            type="java.lang.Object">
+      </propertyTester>
+      <propertyTester
+            class="net.trajano.eclipsepropertytester.EclipsePlatformTester"
+            id="net.trajano.eclipsepropertytester.eclipsePlatformTester"
+            namespace="net.trajano.eclipsePropertyTester"
+            properties="os,os.arch,ws,nl"
+            type="java.lang.Object">
+      </propertyTester>
+   </extension>
+   <extension
+         id="net.trajano.eclipsepropertytester.definitions"
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="net.trajano.eclipsepropertytester.isMacOSX">
+         <test
+               forcePluginActivation="true"
+               property="net.trajano.eclipsePropertyTester.os"
+               value="macosx">
+         </test>
+      </definition>
+      <definition
+            id="net.trajano.eclipsepropertytester.isWin32">
+         <test
+               forcePluginActivation="true"
+               property="net.trajano.eclipsePropertyTester.os"
+               value="win32">
+         </test>
+      </definition>
+   </extension>
+
+</plugin>

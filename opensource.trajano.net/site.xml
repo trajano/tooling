@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="trajano.net Open Source Software" url="http://opensource.trajano.net/">
+      This is the update site for the Eclipse Platform Extensions and future home of Open Source software made by trajano.net
+   </description>
+   <feature url="features/net.trajano.eclipse.platform_3.5.0.0.jar" id="net.trajano.eclipse.platform" version="3.5.0.0">
+      <category name="eclipse-platform-extensions"/>
+   </feature>
+   <feature url="features/net.trajano.eclipse.platform_1.2.0.1.jar" id="net.trajano.eclipse.platform" version="1.2.0.1">
+      <category name="eclipse-platform-extensions"/>
+   </feature>
+   <feature url="features/net.trajano.eclipse.platform_3.5.0.1.jar" id="net.trajano.eclipse.platform" version="3.5.0.1">
+      <category name="eclipse-platform-extensions"/>
+   </feature>
+   <feature url="features/net.trajano.eclipse.platform_3.6.1.0.jar" id="net.trajano.eclipse.platform" version="3.6.1.0">
+      <category name="eclipse-platform-extensions"/>
+   </feature>
+   <feature url="features/net.trajano.eclipse.platform_3.6.1.1.jar" id="net.trajano.eclipse.platform" version="3.6.1.1">
+      <category name="eclipse-platform-extensions"/>
+   </feature>
+   <archive path="plugins/net.trajano.eclipse.platform.core.i18n_3.6.1.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.1/net.trajano.eclipse.platform.core.i18n_3.6.1.1.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform.core_3.6.1.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.1/net.trajano.eclipse.platform.core_3.6.1.1.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform.doc_3.6.1.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.1/net.trajano.eclipse.platform.doc_3.6.1.1.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform_3.6.1.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.1/net.trajano.eclipse.platform_3.6.1.1.jar"/>
+   <archive path="plugins/net.trajano.eclipsepropertytester_3.6.1.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.1/net.trajano.eclipsepropertytester_3.6.1.1.jar"/>
+   <archive path="plugins/net.trajano.openfolder.i18n_3.6.1.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.1/net.trajano.openfolder.i18n_3.6.1.1.jar"/>
+   <archive path="plugins/net.trajano.openfolder.selectionprocessor_3.6.1.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.1/net.trajano.openfolder.selectionprocessor_3.6.1.1.jar"/>
+   <archive path="plugins/net.trajano.openfolder_3.6.1.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.1/net.trajano.openfolder_3.6.1.1.jar"/>
+
+   <archive path="plugins/net.trajano.eclipse.platform.core.i18n_3.6.1.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.0/net.trajano.eclipse.platform.core.i18n_3.6.1.0.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform.core_3.6.1.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.0/net.trajano.eclipse.platform.core_3.6.1.0.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform.doc_3.6.1.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.0/net.trajano.eclipse.platform.doc_3.6.1.0.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform_3.6.1.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.0/net.trajano.eclipse.platform_3.6.1.0.jar"/>
+   <archive path="plugins/net.trajano.eclipsepropertytester_3.6.1.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.0/net.trajano.eclipsepropertytester_3.6.1.0.jar"/>
+   <archive path="plugins/net.trajano.openfolder.i18n_3.6.1.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.0/net.trajano.openfolder.i18n_3.6.1.0.jar"/>
+   <archive path="plugins/net.trajano.openfolder.selectionprocessor_3.6.1.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.0/net.trajano.openfolder.selectionprocessor_3.6.1.0.jar"/>
+   <archive path="plugins/net.trajano.openfolder_3.6.1.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.6.1.0/net.trajano.openfolder_3.6.1.0.jar"/>
+
+   <archive path="plugins/net.trajano.eclipse.platform.core.i18n_3.5.0.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.1/net.trajano.eclipse.platform.core.i18n_3.5.0.1.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform.core_3.5.0.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.1/net.trajano.eclipse.platform.core_3.5.0.1.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform.doc_3.5.0.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.1/net.trajano.eclipse.platform.doc_3.5.0.1.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform_3.5.0.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.1/net.trajano.eclipse.platform_3.5.0.1.jar"/>
+   <archive path="plugins/net.trajano.eclipsepropertytester_3.5.0.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.1/net.trajano.eclipsepropertytester_3.5.0.1.jar"/>
+   <archive path="plugins/net.trajano.openfolder.i18n_3.5.0.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.1/net.trajano.openfolder.i18n_3.5.0.1.jar"/>
+   <archive path="plugins/net.trajano.openfolder.selectionprocessor_3.5.0.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.1/net.trajano.openfolder.selectionprocessor_3.5.0.1.jar"/>
+   <archive path="plugins/net.trajano.openfolder_3.5.0.1.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.1/net.trajano.openfolder_3.5.0.1.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform.core.i18n_3.5.0.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.0/net.trajano.eclipse.platform.core.i18n_3.5.0.0.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform.core_3.5.0.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.0/net.trajano.eclipse.platform.core_3.5.0.0.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform.doc_3.5.0.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.0/net.trajano.eclipse.platform.doc_3.5.0.0.jar"/>
+   <archive path="plugins/net.trajano.eclipse.platform_3.5.0.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.0/net.trajano.eclipse.platform_3.5.0.0.jar"/>
+   <archive path="plugins/net.trajano.openfolder.i18n_3.5.0.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.0/net.trajano.openfolder.i18n_3.5.0.0.jar"/>
+   <archive path="plugins/net.trajano.openfolder.selectionprocessor_3.5.0.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.0/net.trajano.openfolder.selectionprocessor_3.5.0.0.jar"/>
+   <archive path="plugins/net.trajano.openfolder_3.5.0.0.jar" url="http://downloads.sourceforge.net/project/ttl/net.trajano.eclipse.platform/3.5.0.0/net.trajano.openfolder_3.5.0.0.jar"/>
+   <category-def name="eclipse-platform-extensions" label="Eclipse Platform Extensions">
+      <description>
+         This feature adds the following extensions to the Eclipse environment:
+restart workbench, run garbage collection, copy name to clipboard, and open folder.
+      </description>
+   </category-def>
+</site>

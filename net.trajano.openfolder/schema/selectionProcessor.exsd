@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="net.trajano.openfolder">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="net.trajano.openfolder" id="selectionProcessor" name="Selection processor"/>
+      </appInfo>
+      <documentation>
+         This extension point defines a set of selection processors which go through a selection and returns a file.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <complexType>
+         <sequence>
+            <element ref="selectionProcessor" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="selectionProcessor">
+      <complexType>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Class name of the selection processor.  It has to implement &lt;tt&gt;net.trajano.eclipse.openfolder.ISelectionProcessor&lt;/tt&gt;.
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn="net.trajano.eclipse.openfolder.ISelectionProcessor"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         [Enter the first release in which this extension point appears.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         &lt;pre&gt;public final class ResourceSelectionProcessor implements ISelectionProcessor {
+    public IPath getPath(final Object o) {
+        IResource resource = (IResource) ((IAdaptable) o).getAdapter(IResource.class);
+        if (resource != null) {
+            return resource.getLocation();
+        }
+        return null;
+    }
+}&lt;/pre&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiInfo"/>
+      </appInfo>
+      <documentation>
+         See interface &lt;tt&gt;net.trajano.eclipse.openfolder.ISelectionProcessor&lt;/tt&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="implementation"/>
+      </appInfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="copyright"/>
+      </appInfo>
+      <documentation>
+         Copyright (c) 2002-2006 Archimedes Trajano
+      </documentation>
+   </annotation>
+
+</schema>

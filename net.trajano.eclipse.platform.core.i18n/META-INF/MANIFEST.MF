@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %fragment.name
+Bundle-SymbolicName: net.trajano.eclipse.platform.core.i18n
+Bundle-Version: 3.6.1.1
+Bundle-Vendor: trajano.net
+Fragment-Host: net.trajano.eclipse.platform.core;bundle-version="3.3.0.1"
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+

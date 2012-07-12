@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>To Do</title>
+<link rel="stylesheet" href="common.css" />
+</head>
+
+<body>
+
+<h1>Questions to fellow Eclipse plug-in developers</h1>
+<div class="content">
+<p>I am not sure about you, but I find going through the newsgroups
+for Eclipse development support is annoying at best, waste of time at
+worst. So I am posting my questions about Eclipse development here I
+hope you can provide me some answers.</p>
+<ul>
+	<li>Is there a way to get <a href="http://maven.apache.org/">Maven</a>to
+	build the plug-ins for me?</li>
+	<li>How do you get a welcome page working in a plugin? I tried
+	putting in a welcome.xml file but it does not seem to use it.</li>
+	<li>How do I put an icon in the parent menu item for a popup
+	action? In my case the "Open Folder" menu item, I want it to have a
+	folder icon beside it, but I can't seem to get it there.</li>
+	<li>How can I put "Open Folder" in the same group as "Open" and
+	"Open with..."?</li>
+	<li>How do I add help in the Preferences dialog</li>
+	<li>How do I detect that the progress dialog is opened or closed?
+	I want to do something like if the progress dialog was open for more
+	than X seconds, beep.</li>
+	<li>How do I pretty print XML? Everything I do seems to get left
+	flushed.</li>
+	<li>How can you add a pop-up menu to an existing editor? I tried
+	to set the targetID in the viewerExtension tag as
+	org.eclipse.ui.editors.text.TextEditor but no luck.</li>
+</ul>
+
+<p>Also here are some other ideas for plug-ins:</p>
+<ul>
+	<li>Library builder like the one in PDE but for the WEB-INF/lib
+	directory, or a lib directory in a project.</li>
+	<li>RMI remote control application to remotely control Eclipse.
+	Primarily I want to use it to tell Eclipse refresh the files after
+	generating code in a batch file.</li>
+</ul>
+</div>
+</body>
+</html>

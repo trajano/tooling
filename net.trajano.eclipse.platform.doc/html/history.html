@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>History</title>
+<link type="text/css" rel="stylesheet" href="common.css">
+</head>
+<body>
+
+<h1>Release History</h1>
+
+<div class="content">
+<table summary="">
+	<!-- <tr>
+		<td>3.3.0.2</td>
+		<td>
+		<ul>
+			<li>Converted the openers to an extension point?  or a preference screen that does X?  Extension point makes things cleaner, the preference screen allows for end users to just add new ones without having as an extension point.</li>
+			<li>With an Extension point I can provide icons, Mnemonics, etc.</li>
+			<li>I think I would combine the two create a dynamic section that allows the user to add additional openers as needed and convert the existing two as extension points.</li>
+			<li>The copy to clipboard has be refactored out to its own plugin</li>
+			<li>Separated the JDT specific code from the rest of the code and put it in its own plugin and feature.</li>
+			<li>Separated the JDT specific code from the rest of the code and put it in its own plugin and feature.</li>
+		</ul>
+		</td>
+	</tr> -->
+	<tr>
+		<td>3.6.1.1</td>
+		<td>
+		<ul>
+			<li>Corrected the logic for the fully qualified path.  It was
+			not as simple as changing the separator character if I needed support for non-Java files.</li>
+			<li>Added contribution to list adapters for a selected object
+			and copy it to the clipboard.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>3.6.1.0</td>
+		<td>
+		<ul>
+			<li>Added capability of copying the fully qualified path. Useful
+			for those instances when you use Class.getResource or Spring.</li>
+			<li>Added contributions to the welcome overview and what's new
+			pages</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>3.5.0.1</td>
+		<td>
+		<ul>
+			<li>Separated the selection processor plug-in into two plugins.
+			Known overkill, but it will allow creating a feature that does not
+			require JDT for those that may need it.</li>
+			<li>Fixed a bug on the OpenFolder plug-in for the Mac where it
+			does not open the folder in command prompt when a file is selected.</li>
+			<li>Changed the icons and text for Open Folder to be Mac
+			specific.</li>
+			<li>Added a new plug-in for Eclipse Platform property testing.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>3.5.0.0</td>
+		<td>
+		<ul>
+			<li>Target Eclipse 3.5 and above, but since I didn't really
+			write any code specific to Eclipse 3.5 I am putting the version to be
+			at least 3.0 and above if anyone is having trouble please file a bug
+			report so I can determine the minimum version.</li>
+			<li>I am still keeping JRE 1.4 as the minimum requirement rather
+			than taking advantage of the JRE 5.0 features for now.</li>
+			<li>I also took out the locale requirements since not everyone
+			is "en" and I didn't realize it was going to cause issues.</li>
+			<li>Added defaults for MacOSX.</li>
+			<li>For MacOSX, "Open in Command Prompt" is not configurable, it
+			works by executing an AppleScript that is hard coded into the
+			plug-in.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>3.3.0.1</td>
+		<td>
+		<ul>
+			<li>Got rid of "Open Folder -> In Navigator" since the
+			functionality is already available in Eclipse (somewhat) it is called
+			"Show In...". Theoretically it might be better to put the Open Folder
+			functionality in the same sub-menu, but Eclipse didn't expose their
+			APIs to allow us to do it without touching the internals.</li>
+			<li>Migrated from <tt>org.eclipse.ui.popupMenus</tt> and switch
+			to <tt>org.eclipse.ui.commands</tt> and <tt>org.eclipse.ui.menus</tt>.
+			This switch will eventually enable me to use dynamic menus so users
+			can add an arbitrary amount of Open Folder commands in the future.
+			This is the reason why I didn't get rid of the Actions as of yet
+			since I would be working them into actions later. This was also done
+			as well for Copy to Clipboard.</li>
+			<li>The changes made the "Open Folder" also prevent "Open
+			Folder" from being displayed if the object does not support it.</li>
+			<li>Changed the documentation to use the MANIFEST.MF approach</li>
+			<li>Added a separate field for the case when a file has been
+			selected and Open In Explorer had been selected.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>3.3.0.0</td>
+		<td>
+		<ul>
+			<li>Migrated to use Eclipse 3.3 APIs. This is not compatible
+			with 3.2 and below.</li>
+			<li>This is targeting JDK 1.4 so there are no use of advanced
+			JDK 5.0 features such as generics in order to preserve compatibility
+			with users still using 1.4 JDK as their VM.</li>
+			<li><a href="http://maven.apache.org/">Maven</a> use was removed
+			since the PDE removes the <i>.classpath</i> entries put in by Maven.
+			However, the Maven style paths have been kept.</li>
+			<li>Some i18n work has been done. It is primarily used for
+			establishing the environment, so the translations are going to need a
+			lot of work. The translations are separated into fragments ending in
+			<tt>.i18n</tt>.</li>
+			<li>The preference page for the recycle workspace and garbage
+			collection has been separated into two individual pages. Since
+			Eclipse has support for "searching" the preference pages, it would
+			make more sense that they only contain what the user would ask for.
+			However, each preference page description has keyword references to
+			"Eclipse Platform Extensions" and "Platform Extensions" so the user
+			can easily search for it using the old name.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>3.2.0.4</td>
+		<td>
+		<ul>
+			<li>Added back the "Startup" class in order for the autobuild to
+			put in the proper state.</li>
+			<li>Combined the Autobuild with the Garbage collection.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>3.2.0.3</td>
+		<td>
+		<ul>
+			<li>Added back Autobuild toolbar button. It just reuses the
+			Build Automatically action already present in the Project menu.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>3.2.0.2</td>
+		<td>
+		<ul>
+			<li>Fixed a missed &lt;tr&gt; in the release history page.</li>
+			<li>Updated help to reflect new location of Restart and GC.</li>
+			<li>Removed all deprecated code warnings.</li>
+			<li>Ran code through <a href="http://checkstyle.sf.net">CheckStyle</a>
+			(with customized settings).</li>
+			<li>Changed license to Academic Free License</li>
+			<li>Updated Trove categorizations in the <a
+				href="http://sf.net/projects/ttl">SourceForge project</a>, but the
+			UNIX name is still kept.</li>
+			<li>Made a mistake in the JRE used to compile. It now uses the
+			IBM J2SE 1.4 SDK so it will work properly with Rational Application
+			Developer 6.0</li>
+			<li>Tested with Eclipse 3.2M5 as well.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>3.2.0.1</td>
+		<td>
+		<ul>
+			<li>Applied <a
+				href="https://sourceforge.net/tracker/index.php?func=detail&aid=1231468&group_id=19081&atid=319081">patch
+			1231468</a>.</li>
+			<li>Fixed problem with copying fully qualified name on objects
+			that have no package.</li>
+			<li>Added support for multiple selection on copying file name
+			and fully qualified name to clipboard. <a
+				href="http://sourceforge.net/tracker/index.php?func=detail&aid=1251055&group_id=19081&atid=369081">Feature
+			Request 1251055</a>.</li>
+			<li>Removed Platform menu and moved the Restart and GC to the
+			file menu.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>3.2.0.0</td>
+		<td>
+		<ul>
+			<li>Tested and developed on Eclipse 3.2M4. However, there is no
+			use of 3.2 specific APIs.</li>
+			<li>Split up the "Open Folder in..." functionality to its own
+			plugin and is a total rewrite.</li>
+			<li>The marker is now <tt>{}</tt> rather than <tt>{0}</tt>.</li>
+			<li>The "Open Folder in..." plugin also defines an extension
+			point for supporting other selection processors so people can create
+			their own processor as needed without waiting for me to develop it.
+			To facilitate this, the popup will accept any IAdaptable. However,
+			there isn't any documentation to allow explicit activation of an
+			IObjectActionDelegate so if the user tries to open the folder of an
+			unsupported object, it will display a the following message: "The
+			chosen operation is not enabled" the first time it is activated and
+			the object type is not supported.</li>
+			<li>The open in navigator function is a bit smarter in that it
+			will only be present for IResource objects.</li>
+			<li>A "Test" button is provided so the user can test if it the
+			application name they entered is correct.</li>
+			<li>There is support for OS dependent command line strings.
+			However, only Windows has been put in until suitable values for other
+			OSes can be determined.</li>
+		</ul>
+		</td>
+	</tr>
+
+	<tr>
+		<td>3.1.0.2</td>
+		<td>
+		<ul>
+			<li>Added System.runFinalizer() on garbage collection.</li>
+			<li>Added CVS <a
+				href="http://sourceforge.net/tracker/index.php?func=detail&aid=1116818&group_id=19081&atid=319081">patch</a>.</li>
+		</ul>
+		</td>
+	</tr>
+
+	<tr>
+		<td>3.1.0.1</td>
+		<td>
+		<ul>
+			<li>Fixed to work with the 3.1 M4 and above.</li>
+		</ul>
+		</td>
+	</tr>
+
+	<tr>
+		<td>1.2.4</td>
+		<td>
+		<ul>
+			<li>Removed build automatically function since Eclipse 3.0
+			already provides the functionality.</li>
+
+			<li>Added copy fully qualified name on java elements.</li>
+
+			<li>This version will only work on Eclipse 3.0.</li>
+		</ul>
+		</td>
+	</tr>
+
+	<tr>
+		<td>1.2.1</td>
+		<td>
+		<ul>
+			<li>Split the property pages for Garbage collection and Open
+			folder into their own sub-pages in Workbench</li>
+
+			<li>Fixed the formatting and icons on some of the help files.</li>
+
+			<li>Ran plugin migration utilities to migrate to Eclipse 3.0.</li>
+
+			<li>Fixed autobuild so that it would work with the 3.0 API from
+			M5.</li>
+
+			<li>Removed support for 2.1 as the API changes in 3.0 M5 are too
+			big to allow for a hybrid 2.1 + 3.0 support. This was caused by the
+			move to the Rich Client Platform which changed some of the package
+			names around. On the bright note, the older version will still work
+			with 2.1.</li>
+		</ul>
+		</td>
+	</tr>
+
+	<tr>
+		<td>1.2.0</td>
+		<td>
+		<ul>
+			<li>Allow background garbage collection (only on Eclipse SDK 3.0
+			M4)</li>
+
+			<li>Open folder in Explorer and Command Prompt are run as a
+			background task (only on Eclipse SDK 3.0 and above)</li>
+
+			<li>Restart Workbench defaults to "No"</li>
+
+			<li>Added "Copy Name To Clipboard" which copies the OS path name
+			of the selected resource to the clipboard</li>
+
+			<li>Added "Open Folder" -&gt; "In Navigator" which opens the
+			containing folder in the Navigator view.</li>
+
+			<li>Added instructions on how to activate the extension on
+			Eclipse 2.1 and WebSphere Application Developer&nbsp;5.1</li>
+		</ul>
+
+		<p class="fineprint">There were two interim releases before 1.2.0:
+		1.1.1 and 1.1.2, but they were removed because of a bug that prevented
+		it from working in Eclipse 2.1 and WSAD 5.1 which I couldn't fix
+		without a lot of work so I removed them from the SourceForge site.
+		This release has been fixed to work on Eclipse 2.1 though.</p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>1.1.0</td>
+		<td>
+		<ul>
+			<li>Requires Eclipse SDK 2.1</li>
+
+			<li>Added icons</li>
+
+			<li>Added preference pages (in Workbench -&gt; Platform
+			Extensions)</li>
+
+			<li>Externalized strings</li>
+
+			<li>Added Open Folder (like EasyExplore plug-in, but allows for
+			multiple selections)</li>
+
+			<li>Added help page on a separate plug-in</li>
+
+			<li>Added Toggle Autobuild</li>
+
+			<li>Context sensitive help for the preference page item.</li>
+		</ul>
+		</td>
+	</tr>
+
+	<tr>
+		<td>1.0.0</td>
+		<td>
+		<ul>
+			<li>Initial release</li>
+
+			<li>Recycle eclipse and Run Garbage Collection only</li>
+		</ul>
+		</td>
+	</tr>
+</table>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+body {
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 10pt;
+	margin-top:0;
+	margin-left:0;
+	margin-right:0;
+	margin-bottom: 10px;
+}
+div.banner img {
+	vertical-align: top;
+}
+div.banner {
+	background-color: black;
+	font-variant: small-caps;
+	color: white;
+	font-size: 16pt;
+	font-weight: bold;
+}
+div.content {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.fineprint {
+	font-size: 8pt;
+}
+p {
+	text-align:justify;
+}
+h1 {
+	margin-top:0;
+	margin-bottom: 5px;
+	padding-left:5px;
+	font-size: 12pt;
+	border-bottom: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+}
+td {
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 10pt;
+	vertical-align: top;
+	border: 1px solid black;
+	padding: 2px;
+}

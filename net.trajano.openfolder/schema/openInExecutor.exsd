@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="net.trajano.openfolder">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="net.trajano.openfolder" id="openInExecutor" name="Open In Executor"/>
+      </appInfo>
+      <documentation>
+         This extension point defines a method of opening an IPath from the command line.  It defines the platform default command line for the specification.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <complexType>
+         <sequence>
+            <element ref="openInExecutor" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="openInExecutor">
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="environmentCommandLine"/>
+         </sequence>
+         <attribute name="class" type="string">
+            <annotation>
+               <documentation>
+                  Class name of the executor.  It has to implement &lt;tt&gt;net.trajano.eclipse.openfolder.IOpenInExecutor&lt;/tt&gt;.  If this is not specified, it will use the standard executor which invokes the environment specific command line.
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn="net.trajano.eclipse.openfolder.ISelectionProcessor"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="autoAppend" type="boolean" use="default" value="false">
+            <annotation>
+               <documentation>
+                  Automatically append the path if there are no markers specified.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="changePath" type="boolean" use="default" value="true">
+            <annotation>
+               <documentation>
+                  If this is true, then the command line will be executed within the directory of the context path.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="withFileSupport" type="boolean" use="default" value="false">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="environmentCommandLine">
+      <annotation>
+         <documentation>
+            This is the default command line value for a given target platform.  The plug-in will match against the enviornment that matches the os, ws, arch values first.  If none of  os,ws,arch is specified, that would be the default regardless of platform (an element that has none of the targets should be last otherwise it will match before the others.
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="commandLine" type="string" use="required">
+            <annotation>
+               <documentation>
+                  &lt;p&gt;Command line template.  Although the told markers would still work, it is recommended that the new template markers are used instead.&lt;/p&gt;
+
+&lt;p&gt;The new template markers are:&lt;/p&gt;
+&lt;dl&gt;
+  &lt;dt&gt;%d&lt;/dt&gt;
+  &lt;dd&gt;OS directory (this is equivalent to &quot;{}&quot;)&lt;/dd&gt;
+  &lt;dt&gt;%f&lt;/dt&gt;
+  &lt;dd&gt;OS file&lt;/dd&gt;
+  &lt;dt&gt;%p&lt;/dt&gt;
+  &lt;dd&gt;OS Path.  This is a combination of both the OS directory and the OS file.&lt;/dd&gt;
+  &lt;dt&gt;%D&lt;/dt&gt;
+  &lt;dd&gt;Portable string directory (this is equivalent to &quot;{}&quot;)&lt;/dd&gt;
+  &lt;dt&gt;%F&lt;/dt&gt;
+  &lt;dd&gt;Portable string file&lt;/dd&gt;
+  &lt;dt&gt;%P&lt;/dt&gt;
+  &lt;dd&gt;Portable string Path.  This is a combination of both the portable string directory and the portable string file.&lt;/dd&gt;
+&lt;/dl&gt;
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="commandLineWithFile" type="string">
+            <annotation>
+               <documentation>
+                  &lt;p&gt;Command line template.  Although the told markers would still work, it is recommended that the new template markers are used instead.  This value is used when a file has been selected rather than a folder.&lt;/p&gt;
+
+&lt;p&gt;The new template markers are:&lt;/p&gt;
+&lt;dl&gt;
+  &lt;dt&gt;%d&lt;/dt&gt;
+  &lt;dd&gt;OS directory (this is equivalent to &quot;{}&quot;)&lt;/dd&gt;
+  &lt;dt&gt;%f&lt;/dt&gt;
+  &lt;dd&gt;OS file&lt;/dd&gt;
+  &lt;dt&gt;%p&lt;/dt&gt;
+  &lt;dd&gt;OS Path.  This is a combination of both the OS directory and the OS file.&lt;/dd&gt;
+  &lt;dt&gt;%D&lt;/dt&gt;
+  &lt;dd&gt;Portable string directory (this is equivalent to &quot;{}&quot;)&lt;/dd&gt;
+  &lt;dt&gt;%F&lt;/dt&gt;
+  &lt;dd&gt;Portable string file&lt;/dd&gt;
+  &lt;dt&gt;%P&lt;/dt&gt;
+  &lt;dd&gt;Portable string Path.  This is a combination of both the portable string directory and the portable string file.&lt;/dd&gt;
+&lt;/dl&gt;
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="os" type="string">
+            <annotation>
+               <documentation>
+                  Operating system. (e.g. win32)
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="ws" type="string">
+            <annotation>
+               <documentation>
+                  Windowing system.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="arch" type="string">
+            <annotation>
+               <documentation>
+                  Architecture (e.g. x86)
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         3.3.0.1
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         &lt;pre&gt;public final class ResourceSelectionProcessor implements ISelectionProcessor {
+    public IPath getPath(final Object o) {
+        IResource resource = (IResource) ((IAdaptable) o).getAdapter(IResource.class);
+        if (resource != null) {
+            return resource.getLocation();
+        }
+        return null;
+    }
+}&lt;/pre&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiInfo"/>
+      </appInfo>
+      <documentation>
+         See interface &lt;tt&gt;net.trajano.eclipse.openfolder.ISelectionProcessor&lt;/tt&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="implementation"/>
+      </appInfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="copyright"/>
+      </appInfo>
+      <documentation>
+         Copyright (c) 2002-2007 Archimedes Trajano
+      </documentation>
+   </annotation>
+
+</schema>

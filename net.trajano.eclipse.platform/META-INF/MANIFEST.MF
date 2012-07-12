@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %plugin.name
+Bundle-SymbolicName: net.trajano.eclipse.platform;singleton:=true
+Bundle-Version: 3.6.1.1
+Bundle-Vendor: trajano.net
+Bundle-Localization: plugin

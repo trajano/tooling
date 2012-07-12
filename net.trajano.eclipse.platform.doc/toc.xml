@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Platform Extensions Guide" topic="html/toc.html">
+	<topic label="Activating the extensions"  href="html/activating.html"> 
+	</topic>
+	<topic label="Configuring the extensions"  href="html/configuring.html"/> 
+	<topic label="History"  href="html/history.html"/> 
+	<topic label="To-Do"  href="html/todo.html"/> 
+	<topic label="Questions to fellow plug-in developers"  href="html/questions.html"/> 
+	<topic label="Personal Blurb"  href="html/blurb.html"/> 
+</toc>

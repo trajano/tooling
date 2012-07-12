@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=iso-8859-1">
+<title>Platform Extensions</title>
+<link type="text/css" rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="banner"><img src="banner_prod.jpg" alt="Eclipse">
+Platform Extensions</div>
+
+<div class="content">
+<address>by: Archimedes Trajano ( <a href=
+"http://www.trajano.net/">www.trajano.net</a>)</address>
+
+<p>This plug-in adds the following extensions to the Eclipse
+environment:</p>
+
+<table summary="">
+<tr>
+<td><img src="../icons/clipboard.gif" alt="icon"> </td>
+<td>Copy&nbsp;Name&nbsp;To&nbsp;Clipboard &gt; File Name</td>
+<td>
+<p>This copies the file name of the resource to the clipboard. It
+copies the OS path using
+<code>resource.getLocation().toOSString()</code> to the clipboard
+using <code>new&nbsp; Clipboard(...).setContents(...)</code>. To
+get the current display use <code>Display.getCurrent()</code> .</p>
+</td>
+</tr>
+
+<tr>
+<td><img src="../icons/clipboard.gif" alt="icon"> </td>
+<td>Copy&nbsp;Name&nbsp;To&nbsp;Clipboard &gt; Fully Qualified
+Name</td>
+<td>
+<p>This copies the fully qualified name of a Java element. If a
+package is selected it will give the fully qualified name of the
+package.  This will only work on Java Classes and packages.</p>
+</td>
+</tr>
+
+<tr>
+<td><img src="../icons/cmd.png" alt="icon"> </td>
+<td>Open Folder &gt; In&nbsp;Command Prompt</td>
+<td>
+<p>This opens the containing folder of the resource or the folder
+itself in the command prompt window.</p>
+</td>
+</tr>
+
+<tr>
+<td><img src="../icons/explorer.png" alt="icon"> </td>
+<td>Open Folder &gt; In&nbsp;Explorer</td>
+<td>
+<p>This opens the containing folder of the resource or the folder
+itself in Windows explorer.</p>
+
+<p>This is similar to the functionality of EasyExplore, but allows
+multiple selections to be opened and logic to prevent it from
+opening those it cannot open.</p>
+</td>
+</tr>
+
+<tr>
+<td><img src="../icons/filenav_nav.gif" alt="icon"> </td>
+<td>Open Folder &gt; In&nbsp;Navigator</td>
+<td>
+<p>This opens the containing folder of the resource or the folder
+itself in the navigator view. It will open up the view in the
+current perspective if needed.</p>
+</td>
+</tr>
+
+<tr>
+<td><img src="../icons/recycle.gif" alt="icon"> </td>
+<td>Restart Workbench<br>
+(in the File menu)</td>
+<td>
+<p>Restarts the workbench. This is useful if you play around with
+plugins a lot which require Eclipse to restart. That way you don't
+have to wait for Eclipse to fully exit before you restart. This
+would free up more memory than just performing a garbage collection
+call as all the loaded plugins are freed up from memory again.</p>
+
+<p>For plug-in developers, you can use this plug-in to restart your
+runtime workbench and it will force your plug-ins to be reloaded as
+well.</p>
+
+<p>This is not available in the toolbar to prevent accidental
+restarts.</p>
+
+<p>The action calls the <code>restart()</code> method in the
+current workbench.</p>
+</td>
+</tr>
+
+<tr>
+<td><img src="../icons/garbage.gif" alt="icon"> </td>
+<td>Run Garbage Collection<br>
+(in the File menu)</td>
+<td>
+<p>This executes <code>System.gc()</code> which forces the JVM
+garbage collector to start. Please note if there is a large memory
+chunk to be freed, it may crash Eclipse which is why the action
+asks you to save your open editors before performing it (this
+setting is configurable).</p>
+
+<p>The plug-in takes advantage of the 3.0 SDK's new background job
+API for garbage collection. However, it will still work with the
+2.1 SDK as it automatically detects if you are using the 3.0 SDK or
+higher, so you will not have troubles running it on previous
+versions of Eclipse or WebSphere Application Developer 5.1.</p>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+

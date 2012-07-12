@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: I18n Fragment
+Bundle-SymbolicName: net.trajano.openfolder.i18n
+Bundle-Version: 3.6.1.1
+Fragment-Host: net.trajano.openfolder;bundle-version="3.3.0.0"
+Bundle-Vendor: trajano.net
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
