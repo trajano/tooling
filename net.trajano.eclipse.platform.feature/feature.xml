@@ -263,6 +263,12 @@ and open folder.
    </requires>
 
    <plugin
+         id="net.trajano.eclipse.platform"
+         download-size="0"
+         install-size="0"
+         version="4.0.0"
+         unpack="false"/>
+   <plugin
          id="net.trajano.eclipse.platform.core"
          download-size="0"
          install-size="0"
@@ -270,7 +276,14 @@ and open folder.
          unpack="false"/>
 
    <plugin
-         id="net.trajano.eclipse.platform"
+         id="net.trajano.eclipsepropertytester"
+         download-size="0"
+         install-size="0"
+         version="4.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.trajano.openfolder"
          download-size="0"
          install-size="0"
          version="4.0.0"
