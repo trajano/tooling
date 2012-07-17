@@ -3,8 +3,8 @@ package net.trajano.openfolder.internal.actions;
 import java.io.IOException;
 
 import net.trajano.openfolder.ExecUtil;
-import net.trajano.openfolder.internal.OpenInActivator;
 import net.trajano.openfolder.internal.Messages;
+import net.trajano.openfolder.internal.OpenInActivator;
 import net.trajano.openfolder.internal.preferences.PreferenceConstants;
 
 import org.eclipse.core.runtime.IPath;
@@ -20,6 +20,7 @@ public final class OpenFolderInExplorerAction extends AbstractOpenFolderAction {
 	/**
 	 * {@inheritDoc}
 	 */
+	@Override
 	protected void openPath(final IPath path) {
 		final String command;
 		if (path.toFile().isFile()) {
@@ -31,11 +32,12 @@ public final class OpenFolderInExplorerAction extends AbstractOpenFolderAction {
 		}
 		final Job job = new Job(Messages.message("explorer.job",
 				new Object[] { path.toOSString() })) {
+			@Override
 			protected IStatus run(final IProgressMonitor monitor) {
 				try {
 					ExecUtil.runFileExplorer(command, path);
 					return Status.OK_STATUS;
-				} catch (IOException e) {
+				} catch (final IOException e) {
 					return Messages.error("explorer.error", new Object[] { e,
 							path.toOSString(), command }, e);
 				}

@@ -41,15 +41,15 @@ public final class SelectionProcessorFactory {
 		final IExtension[] extensions = Platform.getExtensionRegistry()
 				.getExtensionPoint(SELECTION_PROCESSOR_EXTENSION_POINT_ID)
 				.getExtensions();
-		for (int i = 0; i < extensions.length; ++i) {
-			final IConfigurationElement[] configurationElements = extensions[i]
+		for (final IExtension extension : extensions) {
+			final IConfigurationElement[] configurationElements = extension
 					.getConfigurationElements();
 			try {
-				for (int j = 0; j < configurationElements.length; ++j) {
-					if (configurationElements[j].getName().equals(
+				for (final IConfigurationElement configurationElement : configurationElements) {
+					if (configurationElement.getName().equals(
 							SELECTION_PROCESSOR)) {
 						processors
-								.addProcessor((ISelectionProcessor) configurationElements[j]
+								.addProcessor((ISelectionProcessor) configurationElement
 										.createExecutableExtension(CLASS));
 					}
 				}
@@ -57,10 +57,8 @@ public final class SelectionProcessorFactory {
 				OpenInActivator
 						.getDefault()
 						.getLog()
-						.log(
-								Messages
-										.error(
-												"selectionprocessor.error.message", new Object[] {}, e)); //$NON-NLS-1$
+						.log(Messages
+								.error("selectionprocessor.error.message", new Object[] {}, e)); //$NON-NLS-1$
 			}
 		}
 		return processors;

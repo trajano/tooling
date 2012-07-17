@@ -17,7 +17,7 @@ import org.eclipse.swt.dnd.Transfer;
 import org.eclipse.swt.widgets.Display;
 
 /**
- * @author ARCHIET
+ * @author Archimedes Trajano
  * 
  */
 public abstract class AbstractCopyToClipboardHandler extends AbstractHandler {
@@ -29,13 +29,14 @@ public abstract class AbstractCopyToClipboardHandler extends AbstractHandler {
 		final EvaluationContext applicationContext = (EvaluationContext) event
 				.getApplicationContext();
 
-		final Collection selection = (Collection) applicationContext
+		@SuppressWarnings("unchecked")
+		final Collection<IAdaptable> selection = (Collection<IAdaptable>) applicationContext
 				.getDefaultVariable();
 
-		final StringBuffer buf = new StringBuffer();
+		final StringBuilder buf = new StringBuilder();
 
-		for (final Iterator i = selection.iterator(); i.hasNext();) {
-			buf.append(getAdaptableTextData((IAdaptable) i.next()));
+		for (final Iterator<IAdaptable> i = selection.iterator(); i.hasNext();) {
+			buf.append(getAdaptableTextData(i.next()));
 			if (i.hasNext()) {
 				buf.append('\n');
 			}

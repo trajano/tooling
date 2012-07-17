@@ -16,7 +16,7 @@ public class ListAdaptersHandler extends AbstractCopyToClipboardHandler {
 		buf.append("(class) ");
 		buf.append(adaptable.getClass().getName());
 		buf.append('\n');
-		final Class[] interfaces = adaptable.getClass().getInterfaces();
+		final Class<?>[] interfaces = adaptable.getClass().getInterfaces();
 		for (int i = 0; i < interfaces.length; ++i) {
 			buf.append("(interface) ");
 			buf.append(interfaces[i].getName());

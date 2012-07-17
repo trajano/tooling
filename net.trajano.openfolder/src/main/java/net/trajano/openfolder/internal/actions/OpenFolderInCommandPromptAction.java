@@ -26,29 +26,29 @@ public final class OpenFolderInCommandPromptAction extends
 	 * it invokes an AppleScript that starts up Terminal that is part of the
 	 * plug-in distribution.
 	 */
+	@Override
 	protected void openPath(final IPath path) {
 		final String command = OpenInActivator.getDefault()
-				.getPreferenceStore().getString(
-						PreferenceConstants.P_COMMAND_CMD);
+				.getPreferenceStore()
+				.getString(PreferenceConstants.P_COMMAND_CMD);
 		final Job job = new Job(Messages.message(
 				"cmd.job", new Object[] { path.toOSString() })) { //$NON-NLS-1$
+			@Override
 			protected IStatus run(final IProgressMonitor monitor) {
 				try {
 					if (Platform.OS_MACOSX.equals(Platform.getOS())) {
-						ExecUtil
-								.runAppleScript(
-										getClass()
-												.getResourceAsStream(
-														"/net/trajano/openfolder/internal/OpenInTerminal.applescript"),
-										path);
+						ExecUtil.runAppleScript(
+								getClass()
+										.getResourceAsStream(
+												"/net/trajano/openfolder/internal/OpenInTerminal.applescript"),
+								path);
 					} else {
 						ExecUtil.runCommandPrompt(command, path);
 					}
 					return Status.OK_STATUS;
 				} catch (final IOException e) {
 					return Messages
-							.error(
-									"cmd.error", new Object[] { e, path.toOSString(), command }, e); //$NON-NLS-1$
+							.error("cmd.error", new Object[] { e, path.toOSString(), command }, e); //$NON-NLS-1$
 				}
 			}
 		};

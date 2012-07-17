@@ -97,45 +97,45 @@ public final class ExecUtil {
 		final String fileName = getFileName(path);
 
 		if (hasMarkers(commandLine)) {
-			final StringBuffer parsedCommandLine = new StringBuffer(commandLine
-					.length());
+			final StringBuffer parsedCommandLine = new StringBuffer(
+					commandLine.length());
 			final char[] commandLineArray = commandLine.toCharArray();
 			int state = 0;
-			for (int i = 0; i < commandLineArray.length; ++i) {
+			for (final char element : commandLineArray) {
 				if (state == 0) {
-					if (commandLineArray[i] == '%') {
+					if (element == '%') {
 						state = 1;
-					} else if (commandLineArray[i] == '{') {
+					} else if (element == '{') {
 						state = 2;
 					} else {
-						parsedCommandLine.append(commandLineArray[i]);
+						parsedCommandLine.append(element);
 					}
 				} else if (state == 1) {
-					if (commandLineArray[i] == '%') {
+					if (element == '%') {
 						parsedCommandLine.append('%');
-					} else if (commandLineArray[i] == 'p') {
+					} else if (element == 'p') {
 						parsedCommandLine.append(path.toOSString());
-					} else if (commandLineArray[i] == 'd') {
+					} else if (element == 'd') {
 						parsedCommandLine.append(container.toOSString());
-					} else if (commandLineArray[i] == 'f') {
+					} else if (element == 'f') {
 						parsedCommandLine.append(fileName);
-					} else if (commandLineArray[i] == 'P') {
+					} else if (element == 'P') {
 						parsedCommandLine.append(path.toPortableString());
-					} else if (commandLineArray[i] == 'D') {
+					} else if (element == 'D') {
 						parsedCommandLine.append(container.toPortableString());
-					} else if (commandLineArray[i] == 'F') {
+					} else if (element == 'F') {
 						parsedCommandLine.append(fileName);
 					} else {
 						parsedCommandLine.append('%');
-						parsedCommandLine.append(commandLineArray[i]);
+						parsedCommandLine.append(element);
 					}
 					state = 0;
 				} else if (state == 2) {
-					if (commandLineArray[i] == '}') {
+					if (element == '}') {
 						parsedCommandLine.append(container.toOSString());
 					} else {
 						parsedCommandLine.append('{');
-						parsedCommandLine.append(commandLineArray[i]);
+						parsedCommandLine.append(element);
 					}
 					state = 0;
 				}

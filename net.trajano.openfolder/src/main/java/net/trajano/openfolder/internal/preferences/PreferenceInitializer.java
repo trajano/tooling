@@ -38,6 +38,7 @@ public final class PreferenceInitializer extends AbstractPreferenceInitializer {
 	/**
 	 * @inheritDoc
 	 */
+	@Override
 	public void initializeDefaultPreferences() {
 		final ResourceBundle bundle = ResourceBundle.getBundle(BUNDLE_NAME);
 

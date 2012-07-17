@@ -39,7 +39,7 @@ public class EclipsePlatformTesterTest extends TestCase {
 				.getExpression("net.trajano.eclipsepropertytester.isMacOSX");
 		assertNotNull(expression);
 		final EvaluationResult evaluate = expression
-				.evaluate(new EvaluationContext(null, new ArrayList()));
+				.evaluate(new EvaluationContext(null, new ArrayList<Object>()));
 		assertTrue(EvaluationResult.TRUE.equals(evaluate)
 				|| EvaluationResult.FALSE.equals(evaluate));
 	}
@@ -57,9 +57,9 @@ public class EclipsePlatformTesterTest extends TestCase {
 		final Expression winexpression = registry
 				.getExpression("net.trajano.eclipsepropertytester.isWin32");
 		final EvaluationResult macevaluate = macexpression
-				.evaluate(new EvaluationContext(null, new ArrayList()));
+				.evaluate(new EvaluationContext(null, new ArrayList<Object>()));
 		final EvaluationResult winevaluate = winexpression
-				.evaluate(new EvaluationContext(null, new ArrayList()));
+				.evaluate(new EvaluationContext(null, new ArrayList<Object>()));
 		assertFalse(EvaluationResult.TRUE.equals(macevaluate)
 				&& EvaluationResult.TRUE.equals(winevaluate));
 
@@ -121,7 +121,7 @@ public class EclipsePlatformTesterTest extends TestCase {
 				.getExpression("net.trajano.eclipsepropertytester.isWin32");
 		assertNotNull(expression);
 		final EvaluationResult evaluate = expression
-				.evaluate(new EvaluationContext(null, new ArrayList()));
+				.evaluate(new EvaluationContext(null, new ArrayList<Object>()));
 		assertTrue(EvaluationResult.TRUE.equals(evaluate)
 				|| EvaluationResult.FALSE.equals(evaluate));
 	}

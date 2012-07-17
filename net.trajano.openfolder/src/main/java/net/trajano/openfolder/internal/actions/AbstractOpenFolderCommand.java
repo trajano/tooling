@@ -2,7 +2,6 @@ package net.trajano.openfolder.internal.actions;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 import net.trajano.openfolder.ISelectionProcessor;
@@ -38,12 +37,11 @@ public abstract class AbstractOpenFolderCommand extends AbstractHandler {
 		final EvaluationContext applicationContext = (EvaluationContext) event
 				.getApplicationContext();
 
-		final Collection selection = (Collection) applicationContext
+		final Collection<?> selection = (Collection<?>) applicationContext
 				.getDefaultVariable();
 
-		final Set paths = new HashSet(selection.size());
-		for (final Iterator i = selection.iterator(); i.hasNext();) {
-			final Object object = i.next();
+		final Set<IPath> paths = new HashSet<IPath>(selection.size());
+		for (Object object : selection) {
 			if (object instanceof IAdaptable) {
 				final IPath p = selectionProcessor.getPath(object);
 				if (p != null) {
@@ -64,8 +62,8 @@ public abstract class AbstractOpenFolderCommand extends AbstractHandler {
 			}
 		}
 
-		for (final Iterator i = paths.iterator(); i.hasNext();) {
-			openPath((IPath) i.next());
+		for (final IPath iPath : paths) {
+			openPath(iPath);
 		}
 		return null;
 	}

@@ -4,12 +4,11 @@
  */
 package net.trajano.openfolder;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import net.trajano.openfolder.internal.OpenInActivator;
 import net.trajano.openfolder.internal.Messages;
+import net.trajano.openfolder.internal.OpenInActivator;
 
 import org.eclipse.core.runtime.IPath;
 
@@ -47,15 +46,14 @@ public final class CompositeSelectionProcessor implements ISelectionProcessor {
 	 * {@inheritDoc}
 	 */
 	public IPath getPath(final Object o) {
-		for (Iterator<ISelectionProcessor> i = processors.iterator(); i
-				.hasNext();) {
-			ISelectionProcessor processor = (ISelectionProcessor) i.next();
+		for (final ISelectionProcessor iSelectionProcessor : processors) {
+			final ISelectionProcessor processor = iSelectionProcessor;
 			try {
-				IPath p = processor.getPath(o);
+				final IPath p = processor.getPath(o);
 				if (p != null && p.toFile().exists()) {
 					return p;
 				}
-			} catch (Exception e) {
+			} catch (final Exception e) {
 				OpenInActivator
 						.getDefault()
 						.getLog()

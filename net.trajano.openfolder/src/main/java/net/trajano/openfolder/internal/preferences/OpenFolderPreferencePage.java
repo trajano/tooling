@@ -56,6 +56,7 @@ public final class OpenFolderPreferencePage extends FieldEditorPreferencePage
 	/**
 	 * {@inheritDoc}
 	 */
+	@Override
 	protected void adjustGridLayout() {
 		final GridLayout gridLayout = new GridLayout();
 		gridLayout.numColumns = 1;
@@ -69,6 +70,7 @@ public final class OpenFolderPreferencePage extends FieldEditorPreferencePage
 	/**
 	 * @inheritDoc
 	 */
+	@Override
 	protected void createFieldEditors() {
 		final GridLayout groupLayout = new GridLayout();
 		groupLayout.numColumns = 2;
@@ -85,14 +87,13 @@ public final class OpenFolderPreferencePage extends FieldEditorPreferencePage
 			final Composite note = createNoteComposite(group.getFont(),
 					group,
 					Messages.message("prefpage.explorer.note"), //$NON-NLS-1$
-					Messages
-							.message(
-									"prefpage.explorer.note.text", new Object[] { ExecUtil.MARKER })); //$NON-NLS-1$
+					Messages.message(
+							"prefpage.explorer.note.text", new Object[] { ExecUtil.MARKER })); //$NON-NLS-1$
 			note.setLayoutData(fillRowGridData);
 
 			final StringFieldEditor explorerFieldEditor = new StringFieldEditor(
-					PreferenceConstants.P_EXPLORER_CMD, Messages
-							.message("prefpage.explorer.command"), group); //$NON-NLS-1$
+					PreferenceConstants.P_EXPLORER_CMD,
+					Messages.message("prefpage.explorer.command"), group); //$NON-NLS-1$
 			addField(explorerFieldEditor);
 			final Button b = new Button(group, SWT.PUSH);
 			b.setLayoutData(fillRowGridData);
@@ -106,12 +107,11 @@ public final class OpenFolderPreferencePage extends FieldEditorPreferencePage
 
 				public void mouseUp(final MouseEvent e) {
 					try {
-						ExecUtil.runFileExplorer(explorerFieldEditor
-								.getStringValue(), ROOT_PATH);
+						ExecUtil.runFileExplorer(
+								explorerFieldEditor.getStringValue(), ROOT_PATH);
 					} catch (final IOException ex) {
-						Messages
-								.openErrorDialog(
-										"navigator.error.title", "navigator.error.message", new Object[] {}); //$NON-NLS-1$ //$NON-NLS-2$
+						Messages.openErrorDialog(
+								"navigator.error.title", "navigator.error.message", new Object[] {}); //$NON-NLS-1$ //$NON-NLS-2$
 					}
 				}
 
@@ -128,9 +128,8 @@ public final class OpenFolderPreferencePage extends FieldEditorPreferencePage
 			final Composite note = createNoteComposite(group.getFont(),
 					group,
 					Messages.message("prefpage.explorer.note"), //$NON-NLS-1$
-					Messages
-							.message(
-									"prefpage.explorer.note.text", new Object[] { ExecUtil.MARKER })); //$NON-NLS-1$
+					Messages.message(
+							"prefpage.explorer.note.text", new Object[] { ExecUtil.MARKER })); //$NON-NLS-1$
 			note.setLayoutData(fillRowGridData);
 
 			final StringFieldEditor explorerFieldEditor = new StringFieldEditor(
@@ -149,12 +148,11 @@ public final class OpenFolderPreferencePage extends FieldEditorPreferencePage
 
 				public void mouseUp(final MouseEvent e) {
 					try {
-						ExecUtil.runFileExplorer(explorerFieldEditor
-								.getStringValue(), ROOT_PATH);
+						ExecUtil.runFileExplorer(
+								explorerFieldEditor.getStringValue(), ROOT_PATH);
 					} catch (final IOException ex) {
-						Messages
-								.openErrorDialog(
-										"navigator.error.title", "navigator.error.message", new Object[] {}); //$NON-NLS-1$ //$NON-NLS-2$
+						Messages.openErrorDialog(
+								"navigator.error.title", "navigator.error.message", new Object[] {}); //$NON-NLS-1$ //$NON-NLS-2$
 					}
 				}
 
@@ -169,8 +167,8 @@ public final class OpenFolderPreferencePage extends FieldEditorPreferencePage
 			group.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
 
 			final StringFieldEditor commandPromptStringFieldEditor = new StringFieldEditor(
-					PreferenceConstants.P_COMMAND_CMD, Messages
-							.message("prefpage.cmd.command"), group); //$NON-NLS-1$
+					PreferenceConstants.P_COMMAND_CMD,
+					Messages.message("prefpage.cmd.command"), group); //$NON-NLS-1$
 			addField(commandPromptStringFieldEditor);
 			final Button b = new Button(group, SWT.PUSH);
 			b.setLayoutData(fillRowGridData);
@@ -184,14 +182,12 @@ public final class OpenFolderPreferencePage extends FieldEditorPreferencePage
 
 				public void mouseUp(final MouseEvent e) {
 					try {
-						ExecUtil
-								.runCommandPrompt(
-										commandPromptStringFieldEditor
-												.getStringValue(), ROOT_PATH);
+						ExecUtil.runCommandPrompt(
+								commandPromptStringFieldEditor.getStringValue(),
+								ROOT_PATH);
 					} catch (final IOException ex) {
-						Messages
-								.openErrorDialog(
-										"navigator.error.title", "navigator.error.message", new Object[] {}); //$NON-NLS-1$ //$NON-NLS-2$
+						Messages.openErrorDialog(
+								"navigator.error.title", "navigator.error.message", new Object[] {}); //$NON-NLS-1$ //$NON-NLS-2$
 					}
 				}
 

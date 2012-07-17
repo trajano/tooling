@@ -69,20 +69,20 @@ public class OpenInActivator extends AbstractUIPlugin {
 	 * 
 	 * {@inheritDoc}
 	 */
+	@Override
 	public void start(final BundleContext context) throws Exception {
 		super.start(context);
 		final CompositeSelectionProcessor processors = new CompositeSelectionProcessor();
 		final IExtension[] extensions = Platform.getExtensionRegistry()
 				.getExtensionPoint(SELECTION_PROCESSOR_EXTENSION_POINT_ID)
 				.getExtensions();
-		for (int i = 0; i < extensions.length; ++i) {
-			final IConfigurationElement[] configurationElements = extensions[i]
+		for (final IExtension extension : extensions) {
+			final IConfigurationElement[] configurationElements = extension
 					.getConfigurationElements();
-			for (int j = 0; j < configurationElements.length; ++j) {
-				if (configurationElements[j].getName().equals(
-						SELECTION_PROCESSOR)) {
+			for (final IConfigurationElement configurationElement : configurationElements) {
+				if (configurationElement.getName().equals(SELECTION_PROCESSOR)) {
 					processors
-							.addProcessor((ISelectionProcessor) configurationElements[j]
+							.addProcessor((ISelectionProcessor) configurationElement
 									.createExecutableExtension(CLASS));
 				}
 			}
@@ -94,6 +94,7 @@ public class OpenInActivator extends AbstractUIPlugin {
 	 * This method is called when the plug-in is stopped. It sets the default
 	 * reference to null. {@inheritDoc}
 	 */
+	@Override
 	public final void stop(final BundleContext context) throws Exception {
 		super.stop(context);
 		plugin = null;

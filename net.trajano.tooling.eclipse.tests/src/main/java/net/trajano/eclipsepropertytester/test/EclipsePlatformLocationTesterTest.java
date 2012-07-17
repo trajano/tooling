@@ -9,20 +9,20 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
 
 public class EclipsePlatformLocationTesterTest extends TestCase {
-	public void testInvalid() {
-		assertFalse(new EclipsePlatformLocationTester().test(null,
-				"invalid property", null, "foo"));
-	}
-
 	public void testInstanceLocation() {
 		assertTrue(new EclipsePlatformLocationTester().test(null,
-				EclipsePlatformLocationTester.PROPERTY_INSTANCE, null, Platform
-						.getInstanceLocation()));
+				EclipsePlatformLocationTester.PROPERTY_INSTANCE, null,
+				Platform.getInstanceLocation()));
 	}
 
 	public void testInstanceLocationEqualsLocation() throws Exception {
 		assertEquals(Platform.getLocation(), new Path(new File(Platform
 				.getInstanceLocation().getURL().toURI()).toString()));
+	}
+
+	public void testInvalid() {
+		assertFalse(new EclipsePlatformLocationTester().test(null,
+				"invalid property", null, "foo"));
 	}
 
 	/**
@@ -43,8 +43,8 @@ public class EclipsePlatformLocationTesterTest extends TestCase {
 	 */
 	public void testLocationPath() {
 		assertTrue(new EclipsePlatformLocationTester().test(null,
-				EclipsePlatformLocationTester.PROPERTY_INSTANCE, null, Platform
-						.getLocation()));
+				EclipsePlatformLocationTester.PROPERTY_INSTANCE, null,
+				Platform.getLocation()));
 	}
 
 	/**

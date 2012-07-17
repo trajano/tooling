@@ -6,7 +6,6 @@ package net.trajano.openfolder.test;
 import java.io.File;
 
 import junit.framework.TestCase;
-
 import net.trajano.openfolder.ExecUtil;
 
 import org.eclipse.core.runtime.IPath;
@@ -26,6 +25,7 @@ public class ParserTest extends TestCase {
 	/**
 	 * {@inheritDoc}
 	 */
+	@Override
 	protected void setUp() throws Exception {
 		final File tempFile = File.createTempFile("fo%do", ".bar");
 		tempFile.deleteOnExit();
@@ -39,10 +39,10 @@ public class ParserTest extends TestCase {
 	 * @throws Exception
 	 */
 	public void testGetContainingDirectory() throws Exception {
-		assertEquals(somePath.removeLastSegments(1), ExecUtil
-				.getContainingFolder(somePath));
-		assertEquals(somePath.removeLastSegments(1), ExecUtil
-				.getContainingFolder(somePath.removeLastSegments(1)));
+		assertEquals(somePath.removeLastSegments(1),
+				ExecUtil.getContainingFolder(somePath));
+		assertEquals(somePath.removeLastSegments(1),
+				ExecUtil.getContainingFolder(somePath.removeLastSegments(1)));
 	}
 
 	/**
@@ -52,8 +52,8 @@ public class ParserTest extends TestCase {
 	 */
 	public void testNewParser1() throws Exception {
 		final String parseThis = "foo %p";
-		assertEquals("foo " + somePath.toOSString(), ExecUtil.parse(parseThis,
-				somePath, true));
+		assertEquals("foo " + somePath.toOSString(),
+				ExecUtil.parse(parseThis, somePath, true));
 	}
 
 	/**
@@ -63,8 +63,8 @@ public class ParserTest extends TestCase {
 	 */
 	public void testNewParser2() throws Exception {
 		final String parseThis = "foo %d";
-		assertEquals("foo " + container.toOSString(), ExecUtil.parse(parseThis,
-				somePath, true));
+		assertEquals("foo " + container.toOSString(),
+				ExecUtil.parse(parseThis, somePath, true));
 	}
 
 	/**
@@ -74,8 +74,8 @@ public class ParserTest extends TestCase {
 	 */
 	public void testNewParser3() throws Exception {
 		final String parseThis = "foo %%";
-		assertEquals("foo % " + container.toOSString(), ExecUtil.parse(
-				parseThis, somePath, true));
+		assertEquals("foo % " + container.toOSString(),
+				ExecUtil.parse(parseThis, somePath, true));
 	}
 
 	/**
@@ -85,8 +85,8 @@ public class ParserTest extends TestCase {
 	 */
 	public void testOldParser1() throws Exception {
 		final String parseThis = "foo {}";
-		assertEquals("foo " + container.toOSString(), ExecUtil.parse(parseThis,
-				somePath, true));
+		assertEquals("foo " + container.toOSString(),
+				ExecUtil.parse(parseThis, somePath, true));
 	}
 
 	/**
@@ -96,8 +96,8 @@ public class ParserTest extends TestCase {
 	 */
 	public void testOldParser2() throws Exception {
 		final String parseThis = "foo";
-		assertEquals("foo " + container.toOSString(), ExecUtil.parse(parseThis,
-				somePath, true));
+		assertEquals("foo " + container.toOSString(),
+				ExecUtil.parse(parseThis, somePath, true));
 	}
 
 	/**

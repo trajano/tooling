@@ -22,6 +22,7 @@ public class PluginDefinitionTest extends TestCase {
 		final Expression expression = new DefinitionRegistry()
 				.getExpression("net.trajano.openfolder.canOpen");
 		assertNotNull(expression);
-		expression.evaluate(new EvaluationContext(null, new ArrayList()));
+		expression
+				.evaluate(new EvaluationContext(null, new ArrayList<Object>()));
 	}
 }
