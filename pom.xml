@@ -5,7 +5,7 @@
 	<artifactId>tooling</artifactId>
 	<packaging>pom</packaging>
 	<parent>
-	        <groupId>net.trajano.tooling</groupId>
+		<groupId>net.trajano.tooling</groupId>
 		<artifactId>tooling-parent</artifactId>
 		<version>1-SNAPSHOT</version>
 		<relativePath>tooling-parent</relativePath>
@@ -13,16 +13,21 @@
 	<modules>
 		<module>net.trajano.eclipse.platform</module>
 		<module>net.trajano.eclipse.platform.core</module>
+		<module>net.trajano.eclipse.platform.core.i18n</module>
+		<module>net.trajano.eclipse.platform.doc</module>
 		<module>net.trajano.eclipse.platform.feature</module>
 		<module>net.trajano.eclipsepropertytester</module>
 		<module>net.trajano.openfolder</module>
+		<module>net.trajano.openfolder.i18n</module>
+		<module>net.trajano.openfolder.selectionprocessor</module>
+		<module>net.trajano.openfolder.selectionprocessor.jdt</module>
 		<module>net.trajano.tooling.eclipse.tests</module>
 		<module>opensource.trajano.net</module>
 		<module>tooling-parent</module>
 	</modules>
 	<distributionManagement>
 		<site>
-			<!-- This is explicitly specified so that the deployed site has no project
+			<!-- This is explicitly specified so that the deployed site has no project 
 				ID for the multi-module. -->
 			<id>local</id>
 			<url>file:///${user.dir}/target/deployed-site</url>

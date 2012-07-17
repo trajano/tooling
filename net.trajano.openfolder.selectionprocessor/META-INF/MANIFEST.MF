@@ -1,14 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %plugin.name
-Bundle-SymbolicName: net.trajano.openfolder.selectionprocessor; singleton:=true
-Bundle-Version: 3.6.1.1
+Bundle-SymbolicName: net.trajano.openfolder.selectionprocessor;singleton:=true
+Bundle-Version: 4.0.0
 Bundle-Localization: plugin
 Require-Bundle: net.trajano.openfolder,
  org.eclipse.core.resources,
  org.eclipse.ui,
  org.eclipse.core.runtime
-Bundle-ClassPath: selectionprocessor.jar
 Bundle-Vendor: trajano.net
 Export-Package: net.trajano.openfolder.selectionprocessor;uses:="net.trajano.openfolder"
-Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

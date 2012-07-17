@@ -8,7 +8,7 @@
 		<version>1-SNAPSHOT</version>
 		<relativePath>../tooling-parent</relativePath>
 	</parent>
-	<artifactId>net.trajano.openfolder.selectionprocessor.jdt</artifactId>
+	<artifactId>net.trajano.eclipse.platform.doc</artifactId>
 	<version>4.0.0</version>
 	<packaging>eclipse-plugin</packaging>
 </project>

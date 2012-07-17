@@ -1,12 +1,14 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %plugin.name
-Bundle-SymbolicName: net.trajano.eclipse.platform.doc; singleton:=true
-Bundle-Version: 3.6.1.1
+Bundle-SymbolicName: net.trajano.eclipse.platform.doc;singleton:=true
+Bundle-Version: 4.0.0
 Bundle-Vendor: trajano.net
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.help;bundle-version="3.1.0",
  org.eclipse.ui.intro,
  org.eclipse.ui.intro.universal,
  org.eclipse.ui
 Bundle-ActivationPolicy: lazy
+Eclipse-BundleShape: dir
