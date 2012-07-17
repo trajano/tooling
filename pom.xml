@@ -11,7 +11,7 @@
 		<relativePath>tooling-parent</relativePath>
 	</parent>
 	<modules>
-		<module>net.trajano.tooling.eclipse.commands</module>
+		<module>net.trajano.eclipse.platform.core</module>
 		<module>tooling-parent</module>
 	</modules>
 	<distributionManagement>

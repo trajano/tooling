@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %plugin.name
 Bundle-SymbolicName: net.trajano.eclipse.platform.core; singleton:=true
-Bundle-Version: 3.6.1.1
+Bundle-Version: 4.0.0
 Bundle-ClassPath: core.jar
 Bundle-Activator: net.trajano.eclipse.platform.PlatformExtensionsPlugin
 Bundle-Vendor: trajano.net
