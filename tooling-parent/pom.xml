@@ -83,16 +83,10 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>2.5</version>
 				</plugin>
-				<plugin>
-					<artifactId>maven-site-plugin</artifactId>
-					<dependencies>
-						<dependency>
-							<groupId>${project.groupId}</groupId>
-							<version>${project.version}</version>
-							<artifactId>check-configuration</artifactId>
-						</dependency>
-					</dependencies>
-				</plugin>
+				<!-- <plugin> <artifactId>maven-site-plugin</artifactId> <dependencies> 
+					<dependency> <groupId>${project.groupId}</groupId> <version>${project.version}</version> 
+					<artifactId>check-configuration</artifactId> </dependency> </dependencies> 
+					</plugin> -->
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.12</version>
@@ -116,12 +110,8 @@
 							</configuration>
 						</execution>
 					</executions>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>findbugs-maven-plugin</artifactId>
-					<version>2.5.1</version>
-				</plugin>
+				</plugin><!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>findbugs-maven-plugin</artifactId> 
+					<version>2.5.1</version> </plugin> -->
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
@@ -215,17 +205,10 @@
 		</pluginManagement>
 	</build>
 	<reporting>
-		<plugins>
-			<plugin>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.9.1</version>
-				<configuration>
-					<linkXRef>true</linkXRef>
-					<configLocation>config/checks.xml</configLocation>
-					<includes>**/*.java,**/*.properties</includes>
-					<excludes>target/**,src/test/**</excludes>
-				</configuration>
-			</plugin>
+		<plugins><!-- <plugin> <artifactId>maven-checkstyle-plugin</artifactId> 
+				<version>2.9.1</version> <configuration> <linkXRef>true</linkXRef> <configLocation>config/checks.xml</configLocation> 
+				<includes>**/*.java,**/*.properties</includes> <excludes>target/**,src/test/**</excludes> 
+				</configuration> </plugin> -->
 			<plugin>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.8.1</version>
@@ -291,15 +274,9 @@
 						<format>html</format>
 					</formats>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>2.3.2</version>
-				<configuration>
-					<excludeFilterFile>config/findbugs-exclude-filter.xml</excludeFilterFile>
-				</configuration>
-			</plugin>
+			</plugin><!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>findbugs-maven-plugin</artifactId> 
+				<version>2.3.2</version> <configuration> <excludeFilterFile>config/findbugs-exclude-filter.xml</excludeFilterFile> 
+				</configuration> </plugin> -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>

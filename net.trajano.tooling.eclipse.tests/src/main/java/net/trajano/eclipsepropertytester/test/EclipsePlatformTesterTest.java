@@ -67,8 +67,8 @@ public class EclipsePlatformTesterTest extends TestCase {
 
 	public void testNL() {
 		assertTrue(new EclipsePlatformTester().test(null,
-				EclipsePlatformTester.PROPERTY_NL, new Object[] {}, Platform
-						.getNL()));
+				EclipsePlatformTester.PROPERTY_NL, new Object[] {},
+				Platform.getNL()));
 	}
 
 	/**
@@ -81,8 +81,8 @@ public class EclipsePlatformTesterTest extends TestCase {
 
 	public void testOS() {
 		assertTrue(new EclipsePlatformTester().test(null,
-				EclipsePlatformTester.PROPERTY_OS, new Object[] {}, Platform
-						.getOS()));
+				EclipsePlatformTester.PROPERTY_OS, new Object[] {},
+				Platform.getOS()));
 	}
 
 	public void testOSArch() {
@@ -105,10 +105,10 @@ public class EclipsePlatformTesterTest extends TestCase {
 				.getExtension("net.trajano.eclipsepropertytester.propertyTesters");
 		assertNotNull(extension);
 		assertEquals(2, extension.getConfigurationElements().length);
-		assertEquals(EclipsePlatformLocationTester.class.getName(), extension
-				.getConfigurationElements()[0].getAttribute("class"));
-		assertEquals(EclipsePlatformTester.class.getName(), extension
-				.getConfigurationElements()[1].getAttribute("class"));
+		assertEquals(EclipsePlatformLocationTester.class.getName(),
+				extension.getConfigurationElements()[0].getAttribute("class"));
+		assertEquals(EclipsePlatformTester.class.getName(),
+				extension.getConfigurationElements()[1].getAttribute("class"));
 	}
 
 	/**
@@ -128,7 +128,7 @@ public class EclipsePlatformTesterTest extends TestCase {
 
 	public void testWs() {
 		assertTrue(new EclipsePlatformTester().test(null,
-				EclipsePlatformTester.PROPERTY_WS, new Object[] {}, Platform
-						.getWS()));
+				EclipsePlatformTester.PROPERTY_WS, new Object[] {},
+				Platform.getWS()));
 	}
 }
