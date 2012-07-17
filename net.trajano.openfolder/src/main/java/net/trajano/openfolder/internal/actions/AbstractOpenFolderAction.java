@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import net.trajano.openfolder.CompositeSelectionProcessor;
 import net.trajano.openfolder.ISelectionProcessor;
 import net.trajano.openfolder.internal.OpenInActivator;
 import net.trajano.openfolder.internal.Messages;

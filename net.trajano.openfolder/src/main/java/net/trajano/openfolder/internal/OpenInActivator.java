@@ -1,7 +1,7 @@
 package net.trajano.openfolder.internal;
 
+import net.trajano.openfolder.CompositeSelectionProcessor;
 import net.trajano.openfolder.ISelectionProcessor;
-import net.trajano.openfolder.internal.actions.CompositeSelectionProcessor;
 
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtension;

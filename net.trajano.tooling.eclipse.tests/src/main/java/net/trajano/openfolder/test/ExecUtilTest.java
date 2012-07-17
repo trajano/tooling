@@ -3,13 +3,13 @@ package net.trajano.openfolder.test;
 import java.io.IOException;
 
 import junit.framework.TestCase;
-import net.trajano.openfolder.internal.ExecUtil;
+import net.trajano.openfolder.ExecUtil;
 
 import org.eclipse.core.runtime.Path;
 
 /**
  * <p>
- * Tests {@link net.trajano.openfolder.internal.ExecUtil} methods.
+ * Tests {@link net.trajano.openfolder.ExecUtil} methods.
  * </p>
  * 
  * @author Archimedes Trajano

@@ -1,4 +1,4 @@
-package net.trajano.openfolder.internal;
+package net.trajano.openfolder;
 
 import java.io.BufferedReader;
 import java.io.IOException;

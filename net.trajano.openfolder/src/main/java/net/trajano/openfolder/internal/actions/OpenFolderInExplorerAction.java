@@ -2,7 +2,7 @@ package net.trajano.openfolder.internal.actions;
 
 import java.io.IOException;
 
-import net.trajano.openfolder.internal.ExecUtil;
+import net.trajano.openfolder.ExecUtil;
 import net.trajano.openfolder.internal.OpenInActivator;
 import net.trajano.openfolder.internal.Messages;
 import net.trajano.openfolder.internal.preferences.PreferenceConstants;

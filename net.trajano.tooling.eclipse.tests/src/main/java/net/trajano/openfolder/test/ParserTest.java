@@ -7,7 +7,7 @@ import java.io.File;
 
 import junit.framework.TestCase;
 
-import net.trajano.openfolder.internal.ExecUtil;
+import net.trajano.openfolder.ExecUtil;
 
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;

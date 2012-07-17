@@ -1,7 +1,7 @@
 package net.trajano.openfolder.test;
 
 import junit.framework.TestCase;
-import net.trajano.openfolder.internal.actions.CompositeSelectionProcessor;
+import net.trajano.openfolder.CompositeSelectionProcessor;
 
 /**
  * Tests {@linkplain CompositeSelectionProcessor}.
