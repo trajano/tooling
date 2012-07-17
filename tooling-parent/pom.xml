@@ -146,6 +146,11 @@
 				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-surefire-plugin</artifactId>
+					<version>0.15.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>target-platform-configuration</artifactId>
 					<version>0.15.0</version>
 					<configuration>

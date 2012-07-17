@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-Version: 4.0.0
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: net.trajano.tooling.eclipse.tests;singleton:=true
+Bundle-ManifestVersion: 2
+Require-Bundle: org.junit4;bundle-version="4.0.0",
+ system.bundle
+

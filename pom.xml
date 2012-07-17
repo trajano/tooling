@@ -16,6 +16,7 @@
 		<module>net.trajano.eclipse.platform.feature</module>
 		<module>net.trajano.eclipsepropertytester</module>
 		<module>net.trajano.openfolder</module>
+		<module>net.trajano.tooling.eclipse.tests</module>
 		<module>opensource.trajano.net</module>
 		<module>tooling-parent</module>
 	</modules>
