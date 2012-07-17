@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.0"?>
 <plugin>
-
+<extension id="ide" point="org.eclipse.core.runtime.products">
+   <product
+         application="net.trajano.tooling.eclipse.extensions"
+         name="Eclipse Platform Extensions">
+      <property
+            name="aboutImage"
+            value="trajano.png"/>
+      <property
+      name="aboutText"
+      value="Trajano" />
+   </product> 
+</extension>
      <extension
          point="org.eclipse.ui.actionSets">
       <actionSet

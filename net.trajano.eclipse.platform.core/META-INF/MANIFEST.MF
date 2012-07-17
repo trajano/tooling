@@ -3,7 +3,6 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %plugin.name
 Bundle-SymbolicName: net.trajano.eclipse.platform.core; singleton:=true
 Bundle-Version: 4.0.0
-Bundle-ClassPath: core.jar
 Bundle-Activator: net.trajano.eclipse.platform.PlatformExtensionsPlugin
 Bundle-Vendor: trajano.net
 Bundle-Localization: plugin

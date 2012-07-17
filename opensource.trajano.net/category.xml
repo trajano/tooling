@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<category-def name="eclipse-platform-extensions" label="Eclipse Platform Extensions">
+		<description>
+			This feature adds the following extensions to the Eclipse
+			environment:
+			restart workbench, run garbage collection, copy name to
+			clipboard,
+			and open folder.
+		</description>
+	</category-def>
+	<feature id="net.trajano.eclipse.platform.feature" version="4.0.0">
+		<category name="eclipse-platform-extensions" />
+	</feature>
+</site>
