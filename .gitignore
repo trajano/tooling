@@ -5,10 +5,8 @@
 .metadata
 .project
 .settings/
-artifacts.jar
 bin
 compile.net.trajano.eclipse.platform.xml
-content.jar
 derby.log
 logs.zip
 net.trajano.eclipse.platform_*.zip
