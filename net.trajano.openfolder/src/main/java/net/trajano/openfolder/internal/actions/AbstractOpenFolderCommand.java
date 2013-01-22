@@ -10,7 +10,7 @@ import net.trajano.openfolder.internal.OpenInActivator;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
-import org.eclipse.core.expressions.EvaluationContext;
+import org.eclipse.core.expressions.IEvaluationContext;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -34,14 +34,14 @@ public abstract class AbstractOpenFolderCommand extends AbstractHandler {
 	public final Object execute(final ExecutionEvent event)
 			throws ExecutionException {
 		final ISelectionProcessor selectionProcessor = getSelectionProcessor();
-		final EvaluationContext applicationContext = (EvaluationContext) event
+		final IEvaluationContext applicationContext = (IEvaluationContext) event
 				.getApplicationContext();
 
 		final Collection<?> selection = (Collection<?>) applicationContext
 				.getDefaultVariable();
 
 		final Set<IPath> paths = new HashSet<IPath>(selection.size());
-		for (Object object : selection) {
+		for (final Object object : selection) {
 			if (object instanceof IAdaptable) {
 				final IPath p = selectionProcessor.getPath(object);
 				if (p != null) {
