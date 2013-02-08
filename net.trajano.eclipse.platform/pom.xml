@@ -9,7 +9,7 @@
 		<relativePath>../tooling-parent</relativePath>
 	</parent>
 	<artifactId>net.trajano.eclipse.platform</artifactId>
-	<version>4.0.0</version>
+	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
 </project>
 

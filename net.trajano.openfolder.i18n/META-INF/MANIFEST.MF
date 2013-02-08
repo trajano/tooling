@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: I18n Fragment
 Bundle-SymbolicName: net.trajano.openfolder.i18n
-Bundle-Version: 4.0.0
+Bundle-Version: 4.0.1.qualifier
 Fragment-Host: net.trajano.openfolder;bundle-version="3.3.0.0"
 Bundle-Vendor: trajano.net
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

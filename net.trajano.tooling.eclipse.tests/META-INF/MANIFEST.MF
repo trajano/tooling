@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bundle-Version: 4.0.0
+Bundle-Version: 4.0.1.qualifier
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-SymbolicName: net.trajano.tooling.eclipse.tests;singleton:=true
@@ -10,4 +10,6 @@ Import-Package: net.trajano.eclipsepropertytester,
  org.eclipse.core.runtime
 Require-Bundle: org.junit4;bundle-version="4.0.0",
  system.bundle
+Bundle-Name: %plugin.name
+Bundle-Vendor: Trajano
 

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %plugin.name
 Bundle-SymbolicName: net.trajano.eclipse.platform.doc;singleton:=true
-Bundle-Version: 4.0.0
+Bundle-Version: 4.0.1.qualifier
 Bundle-Vendor: trajano.net
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-Localization: plugin

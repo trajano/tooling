@@ -2,7 +2,7 @@
 <feature
       id="net.trajano.eclipse.platform.feature"
       label="%feature.name"
-      version="4.0.0"
+      version="4.0.1.qualifier"
       provider-name="Trajano"
       plugin="net.trajano.eclipse.platform"
       image="trajano.png">
@@ -266,49 +266,49 @@ and open folder.
          id="net.trajano.eclipse.platform"
          download-size="0"
          install-size="0"
-         version="4.0.0"
+         version="0.0.0"
          unpack="false"/>
-         
+
    <plugin
          id="net.trajano.eclipse.platform.core"
          download-size="0"
          install-size="0"
-         version="4.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="net.trajano.eclipse.platform.doc"
          download-size="0"
          install-size="0"
-         version="4.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="net.trajano.eclipsepropertytester"
          download-size="0"
          install-size="0"
-         version="4.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="net.trajano.openfolder"
          download-size="0"
          install-size="0"
-         version="4.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="net.trajano.openfolder.selectionprocessor"
          download-size="0"
          install-size="0"
-         version="4.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="net.trajano.openfolder.selectionprocessor.jdt"
          download-size="0"
          install-size="0"
-         version="4.0.0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

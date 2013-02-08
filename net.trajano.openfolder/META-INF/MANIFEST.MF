@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-Name: %plugin.name
-Bundle-Version: 4.0.0
+Bundle-Version: 4.0.1.qualifier
 Bundle-Activator: net.trajano.openfolder.internal.OpenInActivator
 Bundle-Vendor: Trajano
 Bundle-Localization: plugin
