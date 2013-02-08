@@ -11,4 +11,12 @@
 	<artifactId>opensource.trajano.net</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-repository</packaging>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
