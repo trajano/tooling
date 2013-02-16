@@ -41,11 +41,14 @@
 	</distributionManagement>
 	<build>
 		<plugins>
-			<!-- Only define plugins that provide extensions on the parent POM. -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
 				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
 			</plugin>
 		</plugins>
 		<pluginManagement>
