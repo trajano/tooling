@@ -4,9 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>net.trajano.tooling</groupId>
-		<artifactId>tooling-parent</artifactId>
+		<artifactId>tooling</artifactId>
 		<version>1-SNAPSHOT</version>
-		<relativePath>../tooling-parent</relativePath>
 	</parent>
 	<artifactId>net.trajano.eclipsepropertytester</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
