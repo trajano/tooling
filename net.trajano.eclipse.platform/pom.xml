@@ -10,5 +10,7 @@
 	<artifactId>net.trajano.eclipse.platform</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
+	   <name>Eclipse Platform Extensions</name>
+	<description>Provides the Welcome information for the feature.</description>
 </project>
 

@@ -10,4 +10,6 @@
 	<artifactId>net.trajano.openfolder.i18n</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
+	<name>Open Folder Plug-in i18n</name>
+	<description>Provides localization for the Open Folder Plug-in.</description>
 </project>

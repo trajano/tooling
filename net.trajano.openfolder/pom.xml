@@ -10,4 +10,6 @@
 	<artifactId>net.trajano.openfolder</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
+	<name>Open Folder Plug-in</name>
+	<description>Provides facilities to open a folder in a file browser or terminal window.</description>
 </project>

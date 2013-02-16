@@ -10,4 +10,6 @@
 	<artifactId>opensource.trajano.net</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-repository</packaging>
+	<name>Trajano P2 repository</name>
+	<description>P2 Repository for the organization.</description>
 </project>

@@ -9,6 +9,8 @@
 	<artifactId>net.trajano.tooling.eclipse.tests</artifactId>
 	<packaging>eclipse-test-plugin</packaging>
 	<version>4.0.1-SNAPSHOT</version>
+	<name>Eclipse Platform Extensions Integration Tests</name>
+	<description>Performs integration tests on the feature using Tycho Surefire plug-in.</description>
 	<build>
 		<plugins>
 			<plugin>

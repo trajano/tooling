@@ -10,5 +10,7 @@
 	<artifactId>net.trajano.eclipse.platform.core.i18n</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
+	<name>Eclipse Platform Extensions Core i18n</name>
+	<description>Provides the localizations for Eclipse Platform Extensions Core.</description>
 </project>
 

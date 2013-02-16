@@ -10,5 +10,7 @@
 	<artifactId>net.trajano.eclipse.platform.core</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
+	<name>Eclipse Platform Extensions Core</name>
+	<description>Provides the core API and implementations to perform the platform extension functionality.</description>
 </project>
 

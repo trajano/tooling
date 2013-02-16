@@ -10,4 +10,6 @@
 	<artifactId>net.trajano.openfolder.selectionprocessor</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
+	<name>Open Folder Selection Processor Plug-in</name>
+	<description>Provides a selection processor for Eclipse resources.</description>
 </project>

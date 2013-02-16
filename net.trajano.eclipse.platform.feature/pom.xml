@@ -10,4 +10,6 @@
 	<artifactId>net.trajano.eclipse.platform.feature</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-feature</packaging>
+	<name>Eclipse Platform Extensions Feature</name>
+	<description>Eclipse Feature that contains the plugins for Eclipse Platform Extensions.</description>
 </project>

@@ -10,4 +10,6 @@
 	<artifactId>net.trajano.eclipse.platform.doc</artifactId>
 	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
+	<name>Eclipse Platform Extensions Help</name>
+	<description>Provides the help files.</description>
 </project>
