@@ -4,11 +4,10 @@
 	<parent>
 		<groupId>net.trajano.tooling</groupId>
 		<artifactId>tooling</artifactId>
-		<version>1-SNAPSHOT</version>
+		<version>4.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>net.trajano.tooling.eclipse.tests</artifactId>
 	<packaging>eclipse-test-plugin</packaging>
-	<version>4.0.1-SNAPSHOT</version>
 	<name>Eclipse Platform Extensions Integration Tests</name>
 	<description>Performs integration tests on the feature using Tycho Surefire plug-in.</description>
 	<build>

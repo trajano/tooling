@@ -5,10 +5,9 @@
 	<parent>
 		<groupId>net.trajano.tooling</groupId>
 		<artifactId>tooling</artifactId>
-		<version>1-SNAPSHOT</version>
+		<version>4.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>net.trajano.eclipse.platform</artifactId>
-	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
 	   <name>Eclipse Platform Extensions</name>
 	<description>Provides the Welcome information for the feature.</description>

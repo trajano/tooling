@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.trajano.tooling</groupId>
 	<artifactId>tooling</artifactId>
-	<version>1-SNAPSHOT</version>
+	<version>4.0.1-SNAPSHOT</version>
 	<name>Tooling</name>
 	<description>Provides Eclipse based tooling for the organization.</description>
 	<packaging>pom</packaging>

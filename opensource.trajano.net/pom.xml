@@ -5,10 +5,9 @@
 	<parent>
 		<groupId>net.trajano.tooling</groupId>
 		<artifactId>tooling</artifactId>
-		<version>1-SNAPSHOT</version>
+		<version>4.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>opensource.trajano.net</artifactId>
-	<version>4.0.1-SNAPSHOT</version>
 	<packaging>eclipse-repository</packaging>
 	<name>Trajano P2 repository</name>
 	<description>P2 Repository for the organization.</description>
