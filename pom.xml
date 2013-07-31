@@ -12,7 +12,7 @@
 	<parent>
 		<groupId>net.trajano</groupId>
 		<artifactId>trajano</artifactId>
-		<version>3-SNAPSHOT</version>
+		<version>4</version>
 		<relativePath>remote</relativePath>
 	</parent>
 	<modules>
@@ -293,9 +293,9 @@
 	</reporting>
 	<repositories>
 		<repository>
-			<id>eclipse-juno</id>
+			<id>eclipse-kepler</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/juno</url>
+			<url>http://download.eclipse.org/releases/kepler</url>
 		</repository>
 	</repositories>
 </project>

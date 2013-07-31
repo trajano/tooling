@@ -8,8 +8,8 @@ Import-Package: net.trajano.eclipsepropertytester,
  net.trajano.openfolder,
  org.eclipse.core.expressions,
  org.eclipse.core.runtime
-Require-Bundle: org.junit4;bundle-version="4.0.0",
- system.bundle
+Require-Bundle: system.bundle,
+ org.junit;bundle-version="4.10.0"
 Bundle-Name: %plugin.name
 Bundle-Vendor: Trajano
 
